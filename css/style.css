@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Ruda:wght@400;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f0f2f5;
+  font-family: "poppins", sans-serif;
+}
+
+header {
+  background: url("https://images.pexels.com/photos/326055/pexels-photo-326055.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1")
+    no-repeat center center/cover;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+}
+
+header::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.content {
+  text-align: center;
+  position: relative;
+  padding: 0 15px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.content h2 {
+  font-size: 4rem;
+}
+
+.content p {
+  font-size: 1.5rem;
+}
+
+.content form {
+  position: relative;
+}
+
+.content input {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-family: inherit;
+  padding: 1rem 3.5rem 1rem 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+.content span {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.content span i {
+  font-size: 1.5rem;
+  color: #555;
+  cursor: pointer;
+}
+
+.content span i:active {
+  transform: scale(0.98);
+}
+
+.image_gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: minmax(150px, auto);
+  grid-auto-flow: dense;
+  grid-gap: 15px;
+  padding: 20px;
+  margin: 3rem auto;
+  max-width: 1400px;
+  min-height: 50vh;
+}
+
+.image_gallery > div {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.image_gallery > div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.image_gallery img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease-in-out;
+}
+
+.image_gallery > div:hover img {
+  transform: scale(1.05);
+}
+
+.v_img {
+  grid-row: span 2;
+  height: auto;
+  min-height: 300px;
+}
+
+.h_img {
+  grid-column: span 2;
+  width: auto;
+  min-width: 400px;
+}
+
+.l_img {
+  grid-row: span 2;
+  grid-column: span 2;
+  height: auto;
+  min-height: 400px;
+  width: auto;
+  min-width: 400px;
+}
+
+.v_img img, .h_img img, .l_img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+.btn_load {
+  outline: none;
+  border: none;
+  margin: 1rem auto 3rem auto;
+  padding: 1rem 3rem;
+  font-family: inherit;
+  background-color: #95020a;
+  color: #fff;
+  display: block;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn_load:hover {
+  background-color: #7a0108;
+}
+
+footer {
+  background-color: #222;
+  color: #ccc;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+footer a:hover {
+  color: #ddd;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .content h2 {
+    font-size: 3rem;
+  }
+
+  .content p {
+    font-size: 1.2rem;
+  }
+
+  .image_gallery {
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+  }
+  .v_img { grid-row: span 2; min-height: 250px;}
+  .h_img { grid-column: span 1; min-width: auto; }
+  .l_img { grid-row: span 2; grid-column: span 1; min-height: 300px; min-width: auto; }
+}
+
+@media (max-width: 480px) {
+  header,
+  header::before {
+    height: 35vh;
+  }
+
+  .content h2 {
+    font-size: 2.2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .content input {
+    font-size: 1rem;
+  }
+
+  .image_gallery {
+    padding: 10px;
+    grid-gap: 8px;
+    grid-auto-rows: minmax(80px, auto);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  .v_img { grid-row: span 2; min-height: 200px;}
+  .h_img { grid-column: span 1; min-width: auto; }
+  .l_img { grid-row: span 2; grid-column: span 1; min-height: 250px; min-width: auto; }
+
+  .btn_load {
+    padding: 0.8rem 2.5rem;
+    font-size: 0.9rem;
+  }
+}
