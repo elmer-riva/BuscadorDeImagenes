@@ -29,11 +29,11 @@ Un proyecto web interactivo que te permite buscar imágenes de alta calidad util
 
 1.  **Clona el repositorio:**
     ```sh
-    git clone [https://github.com/tu-usuario/tu-repositorio.git](https://github.com/tu-usuario/tu-repositorio.git)
+    git clone https://github.com/tu-usuario/tu-repositorio.git
     ```
 2.  **Navega al directorio del proyecto:**
     ```sh
-    cd tu-repositorio
+    cd BuscadorDeImagenes
     ```
 3.  **Abre el archivo `index.html` en tu navegador web.**
 
